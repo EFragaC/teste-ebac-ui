@@ -10,14 +10,17 @@ describe('Funcionalidade: produtos', () => {
 
     it('Deve selecionar um produto da lista', () => {
 
-        cy.get(' .products > .row')
+       cy.get(' .products > .row')
+        //cy.get('.block-inner')
             //.first()
             //.last()
-            //.eq(2)
-            .contains('Apollo Running Short')
+           // .eq(3)
+            .contains('Ajax Full-Zip Sweatshirt')
+            //.contains('Apollo Running Short')
             .click()
 
             cy.get('#tab-title-description > a').should('contain' , 'Descrição')
+           
 
         
     });
